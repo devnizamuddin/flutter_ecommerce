@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
-void main(){
-
+void main() {
   runApp(MaterialApp(
-    home: Container(
-      color: Colors.white,
-      child: Text('Hello World'),
-    ),
-  ));
-
+      home: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+    children: <Widget>[
+      Text('New World'),
+      Text('Hello World'),
+      Text('Hello World')
+    ],
+  )));
 }
