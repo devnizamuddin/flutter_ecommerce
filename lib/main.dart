@@ -1,29 +1,4 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ecommerce/home.dart';
 
-void main(){
-
-  runApp(MaterialApp(
-
-    home: GridView.count( crossAxisCount: 3,
-
-      children: <Widget>[
-        Text('One'),
-        Text('One'),
-        Text('One'),
-        Text('One'),
-        Text('One'),
-        Text('One'),
-        Text('One'),
-        Text('One'),
-        Text('One'),
-        Text('One'),
-        Text('One'),
-        Text('One'),
-        Text('One'),
-
-      ],
-    ),
-
-  ));
-
-}
+void main()=>runApp(MaterialApp(home: Home(),));
