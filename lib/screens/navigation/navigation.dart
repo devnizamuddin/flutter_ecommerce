@@ -73,7 +73,7 @@ class _MyNavigationState extends State<MyNavigation> {
 
             child: ListTile(
               title: Text('Setting'),
-              leading: Icon(Icons.settings,),
+              leading: Icon(Icons.settings,color: Colors.blue,),
             ),
           ),
           InkWell(
@@ -81,7 +81,7 @@ class _MyNavigationState extends State<MyNavigation> {
 
             child: ListTile(
               title: Text('About'),
-              leading: Icon(Icons.help,),
+              leading: Icon(Icons.help,color: Colors.green,),
             ),
           )
 
