@@ -4,7 +4,8 @@ void main(){
 
   runApp(MaterialApp(
 
-    home: ListView(
+    home: GridView.count( crossAxisCount: 3,
+
       children: <Widget>[
         Text('One'),
         Text('One'),
