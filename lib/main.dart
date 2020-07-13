@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ecommerce/home.dart';
+import 'file:///D:/FlutterApp/flutter_ecommerce/flutter_ecommerce/lib/screens/home/home.dart';
 
 void main() => runApp(MaterialApp(
 
