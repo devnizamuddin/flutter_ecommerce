@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_ecommerce/screens/home/categories.dart';
 import 'package:flutter_ecommerce/screens/navigation/navigation.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 
@@ -47,8 +48,17 @@ class _HomeState extends State<Home> {
         ],
       ),
       drawer: MyNavigation(),
-      body: Column(
-        children: <Widget>[image_carousel],
+      body: ListView(
+        children: <Widget>[
+          image_carousel
+
+          ,Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Text('Category'),
+          )
+
+          ,Categories()
+        ],
       )
     );
   }
