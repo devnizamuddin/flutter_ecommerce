@@ -10,10 +10,17 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Scaffold(
 
-      color: Colors.white,
-      child: Text('Hey'),
+      appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: Colors.red,
+        title: Text('FlashApp'),
+        actions: <Widget>[
+          IconButton(icon: Icon(Icons.search),onPressed: (){},)
+        ],
+
+      ),
 
     );
   }
