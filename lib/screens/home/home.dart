@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_ecommerce/screens/home/categories.dart';
+import 'package:flutter_ecommerce/screens/home/products.dart';
 import 'package:flutter_ecommerce/screens/navigation/navigation.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 
@@ -35,7 +36,7 @@ class _HomeState extends State<Home> {
         elevation: 0.0,
         centerTitle: true,
         backgroundColor: Colors.red,
-        title: Text('Ecommarce for App'),
+        title: Text('Ecommarce App'),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.search),
@@ -50,6 +51,8 @@ class _HomeState extends State<Home> {
       drawer: MyNavigation(),
       body: ListView(
         children: <Widget>[
+
+          //image slider
           image_carousel
 
           ,Padding(
@@ -57,7 +60,18 @@ class _HomeState extends State<Home> {
             child: Text('Category'),
           )
 
-          ,Categories()
+
+          //Type of product
+          ,Categories(),
+
+          Padding(
+            padding: EdgeInsets.fromLTRB(8.0, 0.0, 0.0, 8.0),
+            child: Text('Recent Product'),
+          ),
+          //Grid View of product
+
+          Container( height:320,child: Products())
+
         ],
       )
     );
