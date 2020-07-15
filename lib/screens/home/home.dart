@@ -65,7 +65,7 @@ class _HomeState extends State<Home> {
           ,Categories(),
 
           Padding(
-            padding: EdgeInsets.fromLTRB(8.0, 0.0, 0.0, 8.0),
+            padding: EdgeInsets.fromLTRB(8.0, 8.0, 0.0, 8.0),
             child: Text('Recent Product'),
           ),
           //Grid View of product

@@ -11,6 +11,7 @@ class _CategoriesState extends State<Categories> {
   Widget build(BuildContext context) {
     return Container(
       height: 100.0,
+      width: double.infinity,
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: <Widget>[
@@ -40,13 +41,19 @@ class Category extends StatelessWidget {
       child: InkWell(
         onTap: () {},
         child: Container(
-          width: 80.0,
+
+          width: 100.0,
           child: ListTile(
             title: Image.asset(
+
               _image_location,
+              width: 100.0,
+              height: 80.0,
             ),
             subtitle: Text(
               _image_caption,
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 12.0),
             ),
           ),
         ),
