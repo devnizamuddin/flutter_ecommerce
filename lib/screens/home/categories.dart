@@ -9,9 +9,12 @@ class Categories extends StatefulWidget {
 class _CategoriesState extends State<Categories> {
   @override
   Widget build(BuildContext context) {
+
+    // Product Category List
+
     return Container(
       height: 100.0,
-      width: double.infinity,
+
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: <Widget>[
@@ -28,7 +31,10 @@ class _CategoriesState extends State<Categories> {
   }
 }
 
+// Single Category Imtem
+
 class Category extends StatelessWidget {
+
   final String _image_location;
   final String _image_caption;
 
@@ -39,6 +45,7 @@ class Category extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(2.0),
       child: InkWell(
+        //For Click
         onTap: () {},
         child: Container(
 

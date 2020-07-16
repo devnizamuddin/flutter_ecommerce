@@ -14,6 +14,9 @@ class _MyNavigationState extends State<MyNavigation> {
     return Drawer(
       child: ListView(
         children: <Widget>[
+
+          // User Account information
+
           UserAccountsDrawerHeader(
             accountName: Text('Nizam Uddin Shamrat'),
             accountEmail: Text('nshamrat7@gmail.com'),
@@ -26,7 +29,8 @@ class _MyNavigationState extends State<MyNavigation> {
             decoration: BoxDecoration(color: Colors.red),
           ),
 
-          //Nav heaeder
+
+          // Drawer Menu
 
           InkWell(
             onTap: (){},

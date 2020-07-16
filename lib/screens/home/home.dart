@@ -11,6 +11,9 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+
+  //Image Slider
+
   Widget image_carousel = Container(
     height: 200.0,
     child: Carousel(
@@ -29,51 +32,48 @@ class _HomeState extends State<Home> {
       indicatorBgPadding: 2.0,
     ),
   );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0.0,
-        centerTitle: true,
-        backgroundColor: Colors.red,
-        title: Text('Ecommarce App'),
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.search),
-            onPressed: () {},
-          ),
-          IconButton(
-            icon: Icon(Icons.shopping_cart),
-            onPressed: () {},
-          )
-        ],
-      ),
-      drawer: MyNavigation(),
-      body: ListView(
-        children: <Widget>[
+        appBar: AppBar(
+          elevation: 0.0,
+          centerTitle: true,
+          backgroundColor: Colors.red,
+          title: Text('Ecommarce App'),
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(Icons.search),
+              onPressed: () {},
+            ),
+            IconButton(
+              icon: Icon(Icons.shopping_cart),
+              onPressed: () {},
+            )
+          ],
+        ),
+        drawer: MyNavigation(),
+        body: ListView(
+          children: <Widget>[
+            //image slider
+            image_carousel,
+            Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Text('Category'),
+            )
 
-          //image slider
-          image_carousel
+            //Type of product
+            ,
+            Categories(),
 
-          ,Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Text('Category'),
-          )
+            Padding(
+              padding: EdgeInsets.fromLTRB(8.0, 8.0, 0.0, 8.0),
+              child: Text('Recent Product'),
+            ),
+            //Grid View of product
 
-
-          //Type of product
-          ,Categories(),
-
-          Padding(
-            padding: EdgeInsets.fromLTRB(8.0, 8.0, 0.0, 8.0),
-            child: Text('Recent Product'),
-          ),
-          //Grid View of product
-
-          Container( height:320,child: Products())
-
-        ],
-      )
-    );
+            Container(height: 320, child: Products())
+          ],
+        ));
   }
 }
