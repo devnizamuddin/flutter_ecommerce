@@ -17,9 +17,12 @@ class ProductInfo extends StatelessWidget {
     return  Container(
       height: 300,
       child: GridTile(
-        child: Container(
-          color: Colors.white,
-          child: Image.asset(prod_picture),
+        child: Hero(
+          tag: prod_name,
+          child: Container(
+            color: Colors.white,
+            child: Image.asset(prod_picture),
+          ),
         ),
         footer: Container(
           color: Colors.white70,

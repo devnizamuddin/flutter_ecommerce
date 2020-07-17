@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ecommerce/screens/home/home.dart';
 import 'package:flutter_ecommerce/screens/product_details/product_info.dart';
+import 'package:flutter_ecommerce/screens/product_details/similar_product.dart';
 
 class ProductDetails extends StatefulWidget {
   final prod_name;
@@ -21,7 +23,12 @@ class _ProductDetailsState extends State<ProductDetails> {
         elevation: 0.0,
         centerTitle: true,
         backgroundColor: Colors.red,
-        title: Text('Ecommarce App'),
+        title: InkWell(
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Home()));
+            },
+            child: Text('Ecommarce App')),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.search),
@@ -179,7 +186,10 @@ class _ProductDetailsState extends State<ProductDetails> {
             children: <Widget>[
               Padding(
                 padding: EdgeInsets.fromLTRB(12.0, 5.0, 5.0, 5.0),
-                child: Text('Product Name : ', style: TextStyle(color: Colors.grey),),
+                child: Text(
+                  'Product Name : ',
+                  style: TextStyle(color: Colors.grey),
+                ),
               ),
               Padding(
                 padding: EdgeInsets.all(5),
@@ -191,7 +201,10 @@ class _ProductDetailsState extends State<ProductDetails> {
             children: <Widget>[
               Padding(
                 padding: EdgeInsets.fromLTRB(12.0, 5.0, 5.0, 5.0),
-                child: Text('Product Brand : ', style: TextStyle(color: Colors.grey),),
+                child: Text(
+                  'Product Brand : ',
+                  style: TextStyle(color: Colors.grey),
+                ),
               ),
               Padding(
                 padding: EdgeInsets.all(5),
@@ -203,7 +216,10 @@ class _ProductDetailsState extends State<ProductDetails> {
             children: <Widget>[
               Padding(
                 padding: EdgeInsets.fromLTRB(12.0, 5.0, 5.0, 5.0),
-                child: Text('Product Contidion : ', style: TextStyle(color: Colors.grey),),
+                child: Text(
+                  'Product Condition : ',
+                  style: TextStyle(color: Colors.grey),
+                ),
               ),
               Padding(
                 padding: EdgeInsets.all(5),
@@ -211,6 +227,18 @@ class _ProductDetailsState extends State<ProductDetails> {
               )
             ],
           ),
+
+          //Similar product
+
+          Divider(),
+          Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Text("Similar Product"),
+          ),
+          Container(
+            height: 360,
+            child: SimilarProduct(),
+          )
         ],
       ),
     );

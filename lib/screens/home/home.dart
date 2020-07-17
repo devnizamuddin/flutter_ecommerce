@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'file:///D:/FlutterApp/flutter_ecommerce/flutter_ecommerce/lib/screens/cart/cart.dart';
 import 'package:flutter_ecommerce/screens/home/categories.dart';
 import 'package:flutter_ecommerce/screens/home/products.dart';
 import 'package:flutter_ecommerce/screens/navigation/navigation.dart';
@@ -30,6 +31,7 @@ class _HomeState extends State<Home> {
       animationDuration: Duration(milliseconds: 1000),
       dotSize: 4.0,
       indicatorBgPadding: 2.0,
+      dotBgColor: Colors.transparent,
     ),
   );
 
@@ -40,15 +42,17 @@ class _HomeState extends State<Home> {
           elevation: 0.0,
           centerTitle: true,
           backgroundColor: Colors.red,
-          title: Text('Ecommarce App'),
+          title: Text('Ecommerce'),
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.search),
               onPressed: () {},
             ),
             IconButton(
-              icon: Icon(Icons.shopping_cart),
-              onPressed: () {},
+              icon: Icon(Icons.shopping_cart,),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> Cart()));
+              },
             )
           ],
         ),

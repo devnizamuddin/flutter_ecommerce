@@ -1,26 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_ecommerce/screens/product_details/product_details.dart';
 
-class Products extends StatefulWidget {
-  @override
-  _ProductsState createState() => _ProductsState();
-}
-
-class _ProductsState extends State<Products> {
+class SimilarProduct extends StatefulWidget {
   var product_list = [
-    {
-      'name': 'Blazer',
-      'picture': 'images/products/blazer1.jpeg',
-      'old_price': '500',
-      'price': '400'
-    },
-    {
-      'name': 'Red Dress',
-      'picture': 'images/products/dress1.jpeg',
-      'old_price': '1000',
-      'price': '900'
-    },
     {
       'name': 'Hills',
       'picture': 'images/products/hills1.jpeg',
@@ -48,30 +30,36 @@ class _ProductsState extends State<Products> {
   ];
 
   @override
+  _SimilarProductState createState() => _SimilarProductState();
+}
+
+class _SimilarProductState extends State<SimilarProduct> {
+  @override
   Widget build(BuildContext context) {
     return GridView.builder(
-        itemCount: product_list.length,
+        itemCount: widget.product_list.length,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
         ),
         itemBuilder: (BuildContext context, int index) {
-          return SingleProduct(
-              product_list[index]['name'],
-              product_list[index]['picture'],
-              product_list[index]['old_price'],
-              product_list[index]['price']);
+          return SimilarSingleProduct(
+              widget.product_list[index]['name'],
+              widget.product_list[index]['picture'],
+              widget.product_list[index]['old_price'],
+              widget.product_list[index]['price']);
         });
   }
 }
 
-class SingleProduct extends StatelessWidget {
+class SimilarSingleProduct extends StatelessWidget {
 // Design of single Product
   final prod_name;
   final prod_picture;
   final old_price;
   final price;
 
-  SingleProduct(this.prod_name, this.prod_picture, this.old_price, this.price);
+  SimilarSingleProduct(
+      this.prod_name, this.prod_picture, this.old_price, this.price);
 
   @override
   Widget build(BuildContext context) {
@@ -79,7 +67,7 @@ class SingleProduct extends StatelessWidget {
       //For looking like card
       child: Hero(
         //for getting opening animation
-        tag: prod_name,
+        tag: Text('one'),
         child: Material(
           child: InkWell(
             //for getting on click
