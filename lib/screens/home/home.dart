@@ -57,7 +57,7 @@ class _HomeState extends State<Home> {
           ],
         ),
         drawer: MyNavigation(),
-        body: ListView(
+        body: Column(
           children: <Widget>[
             //image slider
             image_carousel,
@@ -76,7 +76,7 @@ class _HomeState extends State<Home> {
             ),
             //Grid View of product
 
-            Container(height: 320, child: Products())
+            Flexible(child: Products())
           ],
         ));
   }

@@ -55,11 +55,14 @@ class _ProductsState extends State<Products> {
           crossAxisCount: 2,
         ),
         itemBuilder: (BuildContext context, int index) {
-          return SingleProduct(
-              product_list[index]['name'],
-              product_list[index]['picture'],
-              product_list[index]['old_price'],
-              product_list[index]['price']);
+          return Padding(
+            padding: const EdgeInsets.all(4.0),
+            child: SingleProduct(
+                product_list[index]['name'],
+                product_list[index]['picture'],
+                product_list[index]['old_price'],
+                product_list[index]['price']),
+          );
         });
   }
 }
